@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles/blog.css">
+        <title>Document</title>
+    </head>
+    <body><%- include("partials/header.ejs") %>
+        <div class="container">
+            <header>
+                <h1><%= locals.title %></h1>
+                <p class="author">By <%= locals.author %></p>
+                <% var today = new Date(); %>
+
+                <% var dd = today.getDate(); %>
+
+                <% var mm = today.getMonth() + 1; %>
+
+                <% var yyyy = today.getFullYear(); %>
+
+                <% if (dd < 10) { %>
+                    <% dd = '0' + dd; %>
+                    <% } %>
+
+                <% if (mm < 10) { %>
+                    <% mm = '0' + mm; %>
+                    <% }  %>
+
+                <% today = dd + '/' + mm + '/' + yyyy; %>
+
+                <p><b>Published On:</b>  <%= today %></p>
+            </header>
+            <article>
+                <section>
+                    <h2>Introduction</h2>
+                    <div class="blog-flex"><p class="author"><%= locals.introduction %></p>
+                        <!-- <img src="img/travel-logo.jpg"
+                        alt="Travel Logo" class="blog-logo">
+                    </div> -->
+                </section>
+                <section>
+                    <h2><%= locals.title %></h2>
+                    <p><%= locals.content %></p>
+                </section>
+                <section>
+                    <h2>Conclusion</h2>
+                    <p class="conclusion"><%= locals.conclusion %></p>                
+                </section>
+            </article>
+        </div>
+        <%- include("partials/social.ejs") %>
+        <%- include("partials/footer.ejs") %>
+        <!-- <main class="container">
+            <article>
+                <h2><%= locals.title %></h2>
+                <% var date = new Date(); %>
+                <p><b>Published On:</b>  <%= date %></p>
+                <p><%= locals.content %></p>
+            </article>
+        </main> -->
+    </body>
+</html>

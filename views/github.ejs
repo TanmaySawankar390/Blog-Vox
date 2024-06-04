@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>How to Contribute to Open Source on GitHub Using Pull
+            Requests</title>
+        <link rel="stylesheet" href="styles/blog.css">
+    </head>
+    <body>
+        <%- include("partials/header.ejs") %>
+        <div class="container">
+            <header>
+                <h1>How to Contribute to Open Source on GitHub Using Pull
+                    Requests</h1>
+                <p class="author">By Tanmay Sawankar</p>
+            </header>
+            <article>
+                <section>
+                    <h2>Introduction</h2>
+                    <div class="blog-flex"><p>Open source contributions are a great
+                        way to improve your coding skills, build your portfolio,
+                        and give back to the community. GitHub, the largest
+                        platform for open source projects, makes it easy for
+                        developers to contribute through pull requests. This
+                        blog will guide you through the process of contributing
+                        to open source projects on GitHub using pull
+                        requests.</p>
+                        <img src="img/github-logo.png"
+                        alt="GitHub Logo" class="github-logo">
+                    </div>
+                    
+                </section>
+                <section>
+                    <h2>Step-by-Step Guide to Contributing via Pull
+                        Requests</h2>
+                    <ol>
+                        <li>
+                            <h3>Set Up Your GitHub Account</h3>
+                            <p>If you don't already have a GitHub account, sign
+                                up at <a href="https://github.com"
+                                    target="_blank">github.com</a>. Configure
+                                your GitHub profile with a profile picture, bio,
+                                and any other relevant information.</p>
+                        </li>
+                        <li>
+                            <h3>Find a Project to Contribute To</h3>
+                            <p>Explore repositories by browsing the <a
+                                    href="https://github.com/explore"
+                                    target="_blank">Explore</a> page or
+                                searching for topics of interest. Look for
+                                repositories with labels like
+                                <code>good-first-issue</code> or <code>help
+                                    wanted</code> which indicate issues suitable
+                                for new contributors.</p>
+                        </li>
+                        <li>
+                            <h3>Fork the Repository</h3>
+                            <p>Go to the repository you want to contribute to
+                                and click the <strong>Fork</strong> button at
+                                the top right corner. This creates a copy of the
+                                repository under your GitHub account.</p>
+                        </li>
+                        <li>
+                            <h3>Clone the Repository</h3>
+                            <p>Clone the forked repository to your local machine
+                                using the following command:</p>
+                            <pre><code>git clone https://github.com/YOUR-USERNAME/REPOSITORY-NAME.git</code></pre>
+                            <p>Navigate into the repository:</p>
+                            <pre><code>cd REPOSITORY-NAME</code></pre>
+                        </li>
+                        <li>
+                            <h3>Create a New Branch</h3>
+                            <p>Create and switch to a new branch for your
+                                work:</p>
+                            <pre><code>git checkout -b my-feature-branch</code></pre>
+                            <p>It's good practice to name your branch something
+                                descriptive about the changes you intend to
+                                make.</p>
+                        </li>
+                        <li>
+                            <h3>Make Your Changes</h3>
+                            <p>Make the necessary changes to the codebase. This
+                                could involve fixing bugs, adding features,
+                                updating documentation, or improving tests. As
+                                you make changes, frequently commit your work
+                                with clear and concise commit messages:</p>
+                            <pre><code>
+git add .
+git commit -m "Description of the changes made"
+                        </code></pre>
+                        </li>
+                        <li>
+                            <h3>Push Your Changes</h3>
+                            <p>Push your changes to your forked repository on
+                                GitHub:</p>
+                            <pre><code>git push origin my-feature-branch</code></pre>
+                        </li>
+                        <li>
+                            <h3>Create a Pull Request</h3>
+                            <p>Navigate to the original repository on GitHub and
+                                you should see a prompt to create a pull request
+                                from your recently pushed branch. Click
+                                <strong>Compare & pull request</strong>. Fill
+                                out the pull request template, providing a clear
+                                title and description of the changes you made,
+                                why they are necessary, and any additional
+                                context. Submit the pull request by clicking
+                                <strong>Create pull request</strong>.</p>
+                        </li>
+                        <li>
+                            <h3>Engage in the Review Process</h3>
+                            <p>The maintainers of the project will review your
+                                pull request. They might ask for changes or
+                                provide feedback. Engage in a constructive
+                                manner, make the requested changes, and update
+                                your pull request as needed:</p>
+                            <pre><code>
+git add .
+git commit -m "Addressed feedback from maintainers"
+git push origin my-feature-branch
+                        </code></pre>
+                        </li>
+                        <li>
+                            <h3>Merge Your Pull Request</h3>
+                            <p>Once your pull request is approved, it will be
+                                merged into the main codebase. Some projects
+                                allow you to merge it yourself, while others
+                                will be merged by the maintainers. Celebrate
+                                your contribution to open source!</p>
+                        </li>
+                    </ol>
+                </section>
+                <section>
+                    <h2>Tips for Successful Contributions</h2>
+                    <ul>
+                        <li><strong>Read the Contribution Guidelines:</strong>
+                            Most projects have contribution guidelines. Read
+                            these carefully to understand how to contribute
+                            effectively.</li>
+                        <li><strong>Communicate Clearly:</strong> Provide clear
+                            and detailed descriptions in your pull requests and
+                            commit messages.</li>
+                        <li><strong>Be Patient and Respectful:</strong> Open
+                            source maintainers are often volunteers. Be patient
+                            while waiting for reviews and be respectful in your
+                            communication.</li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>Conclusion</h2>
+                    <p>Contributing to open source projects on GitHub via pull
+                        requests is a rewarding experience that can help you
+                        grow as a developer and make meaningful contributions to
+                        the community. By following this step-by-step guide,
+                        you'll be well on your way to becoming an active open
+                        source contributor. Happy coding!</p>
+                </section>
+            </article>
+        </div>
+        <%- include("partials/social.ejs") %>
+        <%- include("partials/footer.ejs") %>
+    </body>
+</html>

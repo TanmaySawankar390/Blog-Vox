@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Understanding AWS (Amazon Web Services)</title>
+        <link rel="stylesheet" href="styles/blog.css">
+    </head>
+    <body>
+        <%- include("partials/header.ejs") %>
+        <div class="container">
+            <header>
+                <h1>Understanding AWS (Amazon Web Services)</h1>
+                <p class="author">By Tanmay Sawankar</p>
+            </header>
+            <article>
+                <section>
+                    <h2>Introduction</h2>
+                    <div class="blog-flex"> <p>Amazon Web Services (AWS) is a
+                            comprehensive and widely adopted cloud platform that
+                            offers a plethora of services such as computing
+                            power, storage options, and databases to help
+                            businesses scale and grow. This blog provides an
+                            overview of AWS and its key services, benefits, and
+                            how to get started.</p>
+
+                        <img src="img/amazon-blog.png"
+                            alt="Blog Logo" class="blog-logo">
+                    </div>
+                </section>
+                <section>
+                    <h2>Key Services of AWS</h2>
+                    <ol>
+                        <li>
+                            <h3>Amazon EC2 (Elastic Compute Cloud)</h3>
+                            <p>Amazon EC2 provides scalable computing capacity
+                                in the cloud. It allows users to launch virtual
+                                servers as needed, offering flexibility and
+                                scalability for various applications.</p>
+                        </li>
+                        <li>
+                            <h3>Amazon S3 (Simple Storage Service)</h3>
+                            <p>Amazon S3 is an object storage service that
+                                offers industry-leading scalability, data
+                                availability, security, and performance. It's
+                                designed to store and retrieve any amount of
+                                data from anywhere on the web.</p>
+                        </li>
+                        <li>
+                            <h3>Amazon RDS (Relational Database Service)</h3>
+                            <p>Amazon RDS makes it easy to set up, operate, and
+                                scale a relational database in the cloud. It
+                                supports several database engines, including
+                                MySQL, PostgreSQL, MariaDB, Oracle, and SQL
+                                Server.</p>
+                        </li>
+                        <li>
+                            <h3>Amazon Lambda</h3>
+                            <p>AWS Lambda lets you run code without provisioning
+                                or managing servers. You pay only for the
+                                compute time you consume. It automatically
+                                scales your application by running code in
+                                response to each trigger.</p>
+                        </li>
+                        <li>
+                            <h3>Amazon VPC (Virtual Private Cloud)</h3>
+                            <p>Amazon VPC lets you provision a logically
+                                isolated section of the AWS cloud where you can
+                                launch AWS resources in a virtual network that
+                                you define.</p>
+                        </li>
+                    </ol>
+                </section>
+                <section>
+                    <h2>Benefits of AWS</h2>
+                    <ul>
+                        <li><strong>Scalability:</strong> AWS provides a wide
+                            range of services that can scale up or down based on
+                            the needs of your application.</li>
+                        <li><strong>Cost-Effectiveness:</strong> AWS offers a
+                            pay-as-you-go pricing model, which allows businesses
+                            to manage costs efficiently.</li>
+                        <li><strong>Security:</strong> AWS provides a secure
+                            cloud computing environment, with numerous
+                            compliance programs and features to protect your
+                            data.</li>
+                        <li><strong>Global Reach:</strong> AWS has a vast global
+                            infrastructure, enabling businesses to deploy
+                            applications in multiple regions worldwide.</li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>Getting Started with AWS</h2>
+                    <ol>
+                        <li>
+                            <h3>Create an AWS Account</h3>
+                            <p>Sign up for an AWS account at the <a
+                                    href="https://aws.amazon.com"
+                                    target="_blank">AWS website</a>. You will
+                                need a valid credit card for billing
+                                purposes.</p>
+                        </li>
+                        <li>
+                            <h3>Set Up the AWS Management Console</h3>
+                            <p>The AWS Management Console is a web application
+                                that provides access to your AWS services.
+                                Navigate to the console and log in with your
+                                credentials.</p>
+                        </li>
+                        <li>
+                            <h3>Explore Free Tier Services</h3>
+                            <p>AWS offers a free tier that allows you to use
+                                some AWS services for free up to certain limits.
+                                This is a great way to get hands-on experience
+                                with AWS without incurring costs.</p>
+                        </li>
+                        <li>
+                            <h3>Launch Your First EC2 Instance</h3>
+                            <p>Follow the step-by-step instructions in the AWS
+                                Management Console to launch your first EC2
+                                instance. Choose an instance type, configure the
+                                instance, and connect to it via SSH.</p>
+                        </li>
+                        <li>
+                            <h3>Learn with AWS Tutorials</h3>
+                            <p>AWS provides a wealth of tutorials and
+                                documentation to help you learn and build on the
+                                platform. Explore the <a
+                                    href="https://aws.amazon.com/training/"
+                                    target="_blank">AWS Training and
+                                    Certification</a> page for more
+                                resources.</p>
+                        </li>
+                    </ol>
+                </section>
+                <section>
+                    <h2>Conclusion</h2>
+                    <p>AWS is a powerful and versatile cloud platform that
+                        offers a wide range of services to meet the needs of
+                        businesses of all sizes. By understanding its key
+                        services and benefits, and by getting hands-on
+                        experience, you can leverage AWS to build, deploy, and
+                        scale your applications efficiently and securely.</p>
+                </section>
+            </article>
+        </div>
+        <%- include("partials/social.ejs") %>
+        <%- include("partials/footer.ejs") %>
+    </body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Resolving Nodemon Issues in NPM</title>
+        <link rel="stylesheet" href="styles/blog.css">
+    </head>
+    <body>
+        <%- include("partials/header.ejs") %>
+        <div class="container">
+            <header>
+                <h1>Resolving Nodemon Issues in NPM</h1>
+                <p class="author">By [Your Name]</p>
+            </header>
+            <article>
+                <section>
+                    <h2>Introduction</h2>
+                    <div class="blog-flex"> <p>Nodemon is a popular utility that
+                            helps develop Node.js applications by automatically
+                            restarting the node application when file changes in
+                            the directory are detected. However, sometimes
+                            developers encounter issues where Nodemon doesn't
+                            run properly. This blog provides a detailed guide on
+                            how to troubleshoot and resolve common Nodemon
+                            issues in NPM.</p>
+                        <img src="img/nodemon-logo.png"
+                            alt="Nodemon Logo" class="nodemon-logo">
+                    </div>
+                </section>
+                <section>
+                    <h2>Common Issues and Solutions</h2>
+                    <ol>
+                        <li>
+                            <h3>Nodemon Not Found</h3>
+                            <p><strong>Issue:</strong> The command
+                                <code>nodemon</code> is not recognized.</p>
+                            <p><strong>Solution:</strong> Ensure Nodemon is
+                                installed globally or locally in your
+                                project.</p>
+                            <pre><code># Install Nodemon globally
+npm install -g nodemon
+
+# Or install Nodemon locally in your project
+npm install --save-dev nodemon
+                        </code></pre>
+                        </li>
+                        <li>
+                            <h3>Permission Errors</h3>
+                            <p><strong>Issue:</strong> Permission denied when
+                                trying to run Nodemon.</p>
+                            <p><strong>Solution:</strong> Use <code>sudo</code>
+                                to install Nodemon globally or change the
+                                permissions.</p>
+                            <pre><code># Using sudo for global installation
+sudo npm install -g nodemon
+
+# Changing directory permissions
+sudo chown -R $(whoami) $(npm config get prefix)/{lib/node_modules,bin,share}
+                        </code></pre>
+                        </li>
+                        <li>
+                            <h3>Nodemon Not Restarting on File Changes</h3>
+                            <p><strong>Issue:</strong> Nodemon does not restart
+                                the application when files change.</p>
+                            <p><strong>Solution:</strong> Ensure the correct
+                                file extensions are being watched and check the
+                                Nodemon configuration.</p>
+                            <pre><code>// Add a nodemon.json file to your project root
+{
+  "watch": ["src"],
+  "ext": "js,json",
+  "ignore": ["src/public"]
+}
+                        </code></pre>
+                            <p>Alternatively, use the command line options:</p>
+                            <pre><code>nodemon --watch src --ext js,json
+                        </code></pre>
+                        </li>
+                        <li>
+                            <h3>Compatibility Issues with Node.js Version</h3>
+                            <p><strong>Issue:</strong> Nodemon behaves
+                                unexpectedly with certain Node.js versions.</p>
+                            <p><strong>Solution:</strong> Ensure your Node.js
+                                version is compatible with Nodemon.</p>
+                            <pre><code># Check your Node.js version
+node -v
+
+# Update Node.js if necessary
+nvm install node
+                        </code></pre>
+                        </li>
+                        <li>
+                            <h3>Nodemon Crashes on Startup</h3>
+                            <p><strong>Issue:</strong> Nodemon crashes
+                                immediately after starting.</p>
+                            <p><strong>Solution:</strong> Check for syntax
+                                errors in your code or issues in the Nodemon
+                                configuration.</p>
+                            <pre><code># Run your application with node to check for errors
+node yourApp.js
+
+# If no errors, try running Nodemon in debug mode
+nodemon --verbose yourApp.js
+                        </code></pre>
+                        </li>
+                    </ol>
+                </section>
+                <section>
+                    <h2>Conclusion</h2>
+                    <p>Nodemon is a powerful tool for Node.js development, but
+                        issues can arise. By following these troubleshooting
+                        steps, you can resolve common problems and ensure a
+                        smoother development workflow.</p>
+                </section>
+            </article>
+        </div>
+        <%- include("partials/social.ejs") %>
+        <%- include("partials/footer.ejs") %>
+    </body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles/index.css">
+        <title>Document</title>
+    </head>
+    <body class="blog-write-bg">
+        <%- include("partials/header.ejs") %>
+        <h1 class="blog-write-header">Write Your Blog Here...👇</h1>
+        <form action="/submit" method="POST">
+            <input class="form-title" type="text" name="title"
+                placeholder="Title" />
+                <input class="form-title" type="text" name="author"
+                placeholder="Author" />
+                <input class="form-title" type="text" name="introduction"
+                placeholder="Introduction" />
+            <textarea class="form-content" name="content"
+                placeholder="Write your content here..."></textarea>
+                <input class="form-title" type="text" name="conclusion"
+                placeholder="Conclusion" />
+            <button type="submit">Submit</button>
+        </form>
+        <%- include("partials/social.ejs") %>
+        <%- include("partials/footer.ejs") %>
+    </body>
+</html>

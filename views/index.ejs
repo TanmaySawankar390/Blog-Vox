@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="styles/index.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Pacifico&family=Rock+Salt&display=swap"
+            rel="stylesheet" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Stick&display=swap"
+            rel="stylesheet">
+        <link
+            href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Merienda:wght@300..900&family=Stick&display=swap"
+            rel="stylesheet">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+             <title>Blog-Website</title>
+    </head>
+    <body>
+        <div class="container-one">
+            <%- include("partials/header.ejs") %>
+           <h1 class="intro-front">Namaste 🙏, Tanmay Here !<br><small><small><small><small>A Competitive Programmer and Enthusiast<br></small></small></small></small></h1>
+           
+            <!-- <div class="overdiv">
+                <p class="overdiv-text">Welcome to my corner of the
+                    internet!.<br><br><br>
+                    I am passionate about programming, with strong
+                    coding skills, critical thinking, and a commitment to
+                    societal impact and innovation.</p>
+                <hr class="line">
+                <br><br>
+                <p class="overdiv-text">Come let me show you something!</p>
+                <br>
+                <div class="button-container">
+                  <a href="#recent"><button href="/view-blogs" class="overdiv-button">Blogs</button></a> 
+                    <button class="overdiv-button-2">Learn More</button>
+                </div> -->
+
+            </div>
+        </div>
+        <div class="empty">
+            <h1 class="recent-posts">Recent posts</h1>
+        </div>
+        <div id="recent" class="blog-container">
+            <div class="box-1">
+                <div class="blog-card" onclick="openBlog()">
+                    <a href="/github"> <img src="img/open-source-blog.png"
+                            alt="Blog Image"></a>
+                    <div class="blog-content">
+                        <h2>Open Source Contribution</h2>
+                        <p>You will learn how to start open source contribution
+                            using GitHub.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="box-2"><div class="blog-card" onclick="openBlog()">
+                    <a href="/travel"> <img src="img/travel-blog.jpg"
+                            alt="Blog Image"></a>
+                    <div class="blog-content">
+                        <h2>Travel Your Dream Destinations!</h2>
+                        <p>You will get to know about top places to visit in
+                            India.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="box-3">
+                <div class="blog-card" onclick="openBlog()">
+                    <a href="/amazon"> <img src="img/amazon-logo.png"
+                            alt="Blog Image"></a>
+                    <div class="blog-content">
+                        <h2>Kick Start with Amazon Web Services</h2>
+                        <p>You will learn in detail about a popular cloud staorage AWS.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="box-4">
+                <div class="blog-card">
+                    <a href="/nodemon"> <img src="img/nodemon-blog.jpg"
+                            alt="Blog Image"></a>
+                    <div class="blog-content">
+                        <h2>Nodemon Fix Installation Error</h2>
+                        <p>You will learn how to fix installation error of Nodemon in npm.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <%- include("partials/social.ejs") %>
+        <%- include("partials/footer.ejs") %>
+        <script src="script.js"></script>
+    </body>
+</html>
