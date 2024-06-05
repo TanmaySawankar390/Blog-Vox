@@ -6,7 +6,6 @@ Blog-Vox is a dynamic and responsive blog website built using Express, Node.js, 
 
 - Full-Stack Blog Platform
 - Dynamic Templating with EJS
-- Responsive Design with CSS
 - CRUD Functionality for Blog Posts
 
 ## Prerequisites
